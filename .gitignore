@@ -1,0 +1,56 @@
+# Directorio bin, donde se guardan los binarios compilados
+/bin/
+/out/
+
+# Directorios de compilación
+/build/
+/dist/
+
+# Archivos ejecutables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.out
+
+# Archivos generados por módulos de Go
+/vendor/
+vendor/
+vendor
+
+# Caché del módulo Go
+/pkg/mod/
+
+# Directorio Go por defecto de instalación de módulos
+/GOPATH/
+
+# Dependencias
+# /go.sum
+# /go.mod
+
+# Archivos generados por tests
+*.test
+*.prof
+*.cov
+*.coverprofile
+*.cover.out
+*.tmp
+
+# Archivos de perfil de rendimiento
+*.pprof
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración local
+# .env
+# .env.local
+# .env.*.local
+# .envrc
+# .gitignore
+.idea/
+.vscode/
+*.local
+*.lock
+.DS_Store
