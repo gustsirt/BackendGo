@@ -57,5 +57,8 @@ func BindRoutes(s server.Server, r *mux.Router) {
 	r.HandleFunc("/ws", s.Hub().HandleWebSocket)
 }
 
-//en carpeta database : docker build . -t BackendGo
-//                    : docker run -p 54321:5432 BackendGo
+//en carpeta database : docker build . -t DbBackendGo
+//                    : docker run -p 54321:5432 DbBackendGo
+
+//en carpeta base     : docker build . -t BackendGo
+//                    : docker run -p 5050:5050 BackendGo

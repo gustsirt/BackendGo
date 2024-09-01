@@ -1,4 +1,4 @@
-ARG GO_VERSION=1.16.6
+ARG GO_VERSION=1.23.0
 
 FROM golang:${GO_VERSION}-alpine AS builder
 
@@ -15,15 +15,15 @@ COPY ./ ./
 
 RUN CGO_ENABLED=0 go build \
     -installsuffix 'static' \
-    -o /BackendGo .
+    -o /backendGo .
 
 FROM scratch AS runner
 
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /ect/ssl/certs/
 
 COPY .env ./
-COPY --from=builder /BackendGo /BackendGo
+COPY --from=builder /backendGo /backendGo
 
 EXPOSE 5050
 
-ENTRYPOINT ["/BackendGo"]
+ENTRYPOINT ["/backendGo"]
